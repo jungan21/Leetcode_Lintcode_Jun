@@ -1,0 +1,43 @@
+Best: http://wdxtub.com/interview/14520850399861.html
+Best logic: http://wdxtub.com/interview/14520850399861.html
+https://wenyuanjiao.gitbooks.io/algorithm_practice/content/shorest_job_first.html
+http://prog3.com/sbdm/blog/rollycoris/article/month/2015/10
+
+https://wenyuanjiao.gitbooks.io/algorithm_practice/content/amazon_oa2.html
+http://123.57.208.150/bbs/forum.php?mod=viewthread&tid=138280&extra=page%3D1%26filter%3Dsortid%26sortid%3D192&mobile=1
+
+http://www.themianjing.com/2015/12/amazon-oa2-12-5-due/
+
+
+Round Robin: Rbcroyalbank.com/online/
+Maze: http://blog.csdn.net/lycorislqy/article/details/49202651
+
+
+给一个数n，要求打印出长宽为n的直角三角形，比如
+    3              A
+                  AA
+                AAA
+                
+                
+                一月的电面，被放了一次鸽子，这次是第二次，应该是个美国人。
+1.问了我怎么样实现hashtable
+2.给出这么一题：比如下面是一帮用户的网页浏览情况：
+A : p1 （用户A看了Page1）
+B : p2
+A : p2. 鐗涗汉浜戦泦,涓€浜╀笁鍒嗗湴
+C : p3
+B : p3. From 1point 3acres bbs
+A : p4
+B : p4
+C : p2
+请找出被用户看得最多的page sequence of 3
+比如上面的例子就是 p2,p3,p4，因为A和B都看了这个sequence
+我对每个用户建一个queue，然后将每个sequence of 3 hash进hashtable记录每个sequence看了多少次
+                先问我的background 没问prj 没问data structure 然后就两到简单题
+
+1. nth Fibonacci 
+
+OOD的题，一共三道，第一个是问你其中有一个方法有什么问题，第二个是问有一个shopping cart class 有什么问题，第三个是给了五个test case问能不能过，记得有一个是user类，构造函数有四个参数但是函数里只给其中三个赋值了email没有赋值，有一个test case大概是User user = new User(abc,age,address,abc@gmail.com) 问email最后等不等于abc@gmail.com我选的错。看log的也不难就是找相同出错原因问那几条的相同点就可以。
+
+
+                

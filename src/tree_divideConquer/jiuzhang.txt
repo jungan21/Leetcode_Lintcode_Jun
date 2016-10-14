@@ -1,0 +1,11 @@
+二叉树相关的知识点参考文献：
+
+http://zisong.me/post/suan-fa/geng-jian-dan-de-bian-li-er-cha-shu-de-fang-fa
+
+http://blog.sina.com.cn/s/blog_eb52001d0102v1si.html
+
+递归相关：
+
+http://www.nowamagic.net/librarys/veda/detail/2314
+
+http://zisong.me/post/suan-fa/ren-nao-li-jie-di-gui
