@@ -1,3 +1,13 @@
+/**
+Input : abc++
+Output : (a + (b + c))
+
+Input  : ab*c+
+Output : ((a*b)+c)
+
+*/
+
+
 import java.util.Scanner;
 import java.util.Stack;
  
