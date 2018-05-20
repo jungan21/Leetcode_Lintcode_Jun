@@ -53,21 +53,19 @@ public class Island_withMaxNumberOfLands {
 	// 其实这个 DFS过程就是merge的过程，将附近的符合一个岛要求的岛都忽略掉,其实就是把联通区域内的岛屿merge掉
 	int[] dx = { 1, -1, 0, 0 };
 	int[] dy = { 0, 0, 1, -1 };
-	int count = 0;
 	public int DFS(int[][] grid, HashSet<String> set, int x, int y) {
 		if (x < 0 || x >= grid.length || y < 0 || y >= grid[0].length
 				|| grid[x][y] != 1 || set.contains(x + "," + y)) {
 			return 0;
 		}
-		count = 0;
 		// 都不一定需要用set 来track访问过没有，由于没有回朔的过程，直接grid[i][j]='#';都行
+		int count = 1;
 		set.add(x + "," + y);
 		for (int k = 0; k < 4; k++) {
 			int newX = x + dx[k];
 			int newY = y + dy[k];
-			DFS(grid, set, newX, newY);
+			count = DFS(grid, set, newX, newY) + count;
 		}
-		count ++;
 		return count;
 	}
 }
