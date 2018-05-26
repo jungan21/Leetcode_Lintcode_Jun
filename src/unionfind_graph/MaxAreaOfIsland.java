@@ -1,4 +1,4 @@
-
+package unionfind_graph;
 import java.util.HashSet;
 
 /**
@@ -14,13 +14,13 @@ import java.util.HashSet;
  * up/down/left/right adjacent.
  *
  */
-public class Island_withMaxNumberOfLands {
+public class MaxAreaOfIsland {
 
 	public static void main(String[] args) {
 		int[][] grid = { { 1, 1, 0, 0, 0 }, { 1, 1, 0, 0, 1 },
 				{ 0, 0, 0, 1, 1 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 1 } };
 
-		System.out.print(new Island_withMaxNumberOfLands().numIslands(grid));
+		System.out.print(new MaxAreaOfIsland().numIslands(grid));
 	}
 
 	/**
