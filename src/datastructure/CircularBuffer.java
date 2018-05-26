@@ -85,7 +85,7 @@ class CircularBuffer
  
  
 /** Class CircularBufferTest  **/
-public class CircularBufferTest
+ class CircularBufferTest
 {
     public static void main(String[] args)
     {
