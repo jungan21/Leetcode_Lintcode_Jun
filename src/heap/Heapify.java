@@ -1,6 +1,8 @@
 package heap;
 
 /**
+ * "Heapify -> heap sort": https://www.sanfoundry.com/java-program-implement-heap-sort/
+ * 
  * Given an integer array, heapify it into a min-heap array.
  * 
  * For a heap array A, A[0] is the root of heap, and for each A[i], A[i * 2 + 1]
