@@ -57,8 +57,7 @@ public class WordBreak {
 			 * 由于上面，我们得到字典里最长单词的长度，我们从i的位置往后推，最远到 i - lastWordLength=0,
 			 * 这样就没有必要像下面的方法那样，每次从最开始0的位置一直循环
 			 */
-			for (int lastWordLength = 1; lastWordLength <= maxLength
-					&& lastWordLength <= i; lastWordLength++) {
+			for (int lastWordLength = 1; lastWordLength <= maxLength && lastWordLength <= i; lastWordLength++) {
 				if (!dp[i - lastWordLength]) {
 					continue;
 				}
@@ -130,5 +129,31 @@ public class WordBreak {
 		}
 
 		return dp[len];
+	}
+
+	/**
+	 * Recursive - Jun OKTA interview 2018/05
+	 */
+
+	public boolean wordBreakRecursive(String word, Set<String> dict) {
+		return DFS(word, dict, 0);
+	}
+
+	public boolean DFS(String word, Set<String> dict, int start) {
+		if (start == word.length())
+			return true;
+
+		for (String curWordInDict : dict) {
+			int len = curWordInDict.length();
+			
+			// end index should be <= string length
+			if ((start + len) > word.length())
+				continue;
+
+			if (word.substring(start, start + len).equals(curWordInDict))
+				if (DFS(word, dict, start + len))
+					return true;
+		}
+		return false;
 	}
 }
