@@ -57,6 +57,37 @@ public class LongestPalindromicSubstring {
 		return res;
 	}
 
+
+	// HW PDd candidate
+	public static String longestPalindromeHW(String s) {
+		int start = 0, end = 0;
+		for (int i = 0; i < s.length(); i++) {
+			int[] oddResult = expand(s, i, i); //输入：babad， 结果为bab, i=1，以a为中心expand（及时l,r都为1）
+			int[] evenResult = expand(s, i, i+1);//输入：cbbd, 结果为bb,以第一个b位置为l, 第二个b位置为r
+			if(oddResult[1] - oddResult[0] > end - start){
+				start = oddResult[0];
+				end = oddResult[1];
+			}
+			if(evenResult[1] - evenResult[0] > end - start){
+				start = evenResult[0];
+				end = evenResult[1];
+			}
+		}
+
+		System.out.print(start + "," + end);
+		return s.substring(start, end + 1 );
+	}
+
+	private static int[] expand(String s, int l, int r) {
+		while(l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)){
+			l--;
+			r++;
+		}
+		int[] result = new int[2];
+		result[0] = l + 1;
+		result[1] = r  -1;
+		return result;
+	}
 	/**
 	 * jiuzhang https://www.youtube.com/watch?v=V-sEwsca1ak
 	 */
@@ -97,6 +128,47 @@ public class LongestPalindromicSubstring {
 			return '#';
 		else
 			return s.charAt(i / 2);
+	}
+
+
+	//===== DFS cbbd
+	private static String result = "";
+	public static String longestPalindromeDFS(String s) {
+		StringBuilder str = new StringBuilder();
+		//int[] visited = new int[s.length()];
+		helper(s.toCharArray(), str,  0);
+		return result;
+	}
+
+	public static void helper(char[] s, StringBuilder str, int pos){
+		System.out.println(str.toString());
+		if(isPalindrom(str.toString())){
+			if (str.toString().length() > result.length()){
+				result = str.toString();
+			}
+		}
+
+		for (int i = pos; i < s.length; i++ ){
+			str = str.append(s[i]);
+			helper (s, str, i + 1);
+			str = str.deleteCharAt(str.length() -1);
+		}
+
+	}
+
+	public static boolean isPalindrom(String s){
+		int i = 0;
+		int j = s.length() - 1;
+
+		while (i < j) {
+			if (s.charAt(i) != s.charAt(j)) {
+				return false;
+			} else {
+				i++;
+				j--;
+			}
+		}
+		return true;
 	}
 
 	/**

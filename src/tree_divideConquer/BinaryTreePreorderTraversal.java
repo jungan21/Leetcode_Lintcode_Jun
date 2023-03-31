@@ -85,7 +85,7 @@ public class BinaryTreePreorderTraversal {
 		ArrayList<Integer> result = new ArrayList<Integer>();
 		/**
 		 * null condition better than leaf node condition
-		 * 
+		 *
 		 * can NOT ignore this if condition, otherwise, will get
 		 * NullPointerException
 		 */

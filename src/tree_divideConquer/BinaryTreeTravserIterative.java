@@ -23,7 +23,7 @@ public class BinaryTreeTravserIterative {
 				stack.push(n.right);
 				/**
 				 * you can remove n.right = null;
-				 * 
+				 *
 				 * because, eveytime, you process the root node first, it won't
 				 * re-visit root.left/right again
 				 */
@@ -33,7 +33,7 @@ public class BinaryTreeTravserIterative {
 				stack.push(n.left);
 				/**
 				 * you can remove n.right = null;
-				 * 
+				 *
 				 * because, eveytime, you process the root node first, it won't
 				 * re-vist root.left/right again
 				 */
@@ -56,7 +56,7 @@ public class BinaryTreeTravserIterative {
 			TreeNode top = stack.peek();
 			/**
 			 * 思路是：in order: left -> root > right
-			 * 
+			 *
 			 * 一直把左边的压栈，直到没有left child,然后从最左边的node开始pop
 			 */
 			if (top.left != null) {

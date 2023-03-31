@@ -16,6 +16,8 @@ public class MaximumDepthofBinaryTree {
 
 	// Divide Connquer recrusion
 	// http://www.jiuzhang.com/solutions/maximum-depth-of-binary-tree/
+
+	// 求树的最大深度，即从root到叶子节点的最长的路径多长
 	public int maxDepth(TreeNode root) {
 		if (root == null) {
 			return 0;
@@ -27,7 +29,6 @@ public class MaximumDepthofBinaryTree {
 
 		// conquer, 1 means root itself
 		return Math.max(left, right) + 1;
-
 	}
 
 	/**
@@ -53,7 +54,7 @@ public class MaximumDepthofBinaryTree {
 		helper(node.right, curtDepth + 1);
 	}
 
-	// BFS, level order traverser
+	// BFS  求树的最大深度，即从root到叶子节点的最长的路径多
 	public int maxDepthLevelOrderTraverse(TreeNode root) {
 		if (root == null) {
 			return 0;
@@ -78,4 +79,9 @@ public class MaximumDepthofBinaryTree {
 		}
 		return maxDepth;
 	}
+
+	public int BFS (TreeNode root) {
+
+	}
+
 }

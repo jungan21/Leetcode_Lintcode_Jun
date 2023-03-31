@@ -91,7 +91,7 @@ public class BinaryTreeInorderTraversal {
 		ArrayList<Integer> result = new ArrayList<Integer>();
 		/**
 		 * null or leaf
-		 * 
+		 *
 		 * you can NOTE ignore this condition, otherwise, you will get
 		 * NullPointerException
 		 */

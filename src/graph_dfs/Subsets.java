@@ -116,15 +116,14 @@ public class Subsets {
 			return result;
 		}
 		ArrayList<Integer> list = new ArrayList<Integer>();
-		// because Lintcode 要求输出结果每个List 是排序的， Leetcode没此要求所以提交LeetCode时候不需要排序
-		Arrays.sort(num);
+		Arrays.sort(num); //如果结果要求排序
 		// 0 means index of the array, i.e position
-		subsetsHelper(result, list, num, 0);
+		DFS(result, list, num, 0);
 
 		return result;
 	}
 
-	private static void subsetsHelper(ArrayList<ArrayList<Integer>> result,
+	private static void DFS(ArrayList<ArrayList<Integer>> result,
 			ArrayList<Integer> list, int[] num, int pos) {
 
 		result.add(new ArrayList<Integer>(list));
@@ -151,7 +150,7 @@ public class Subsets {
 			 * ，而permutation是每次从0位置开始排列整个数组
 			 */
 			// 第i个位置摆好了，接下来轮到i+1的位置，即下一个位置
-			subsetsHelper(result, list, num, i + 1);
+			DFS(result, list, num, i + 1);
 			// 譬如[1, 2, 3,] DFS了一遍，以1开头的subset都找到了，接下来找以2开头的
 			list.remove(list.size() - 1);
 		}

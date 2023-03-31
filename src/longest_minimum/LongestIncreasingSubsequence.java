@@ -24,6 +24,27 @@ public class LongestIncreasingSubsequence {
 		System.out.println(longestIncreasingSubsequence(nums));
 	}
 
+	public int lengthOfLISBruteforceMethod(int[] nums) {
+		if(nums==null || nums.length==0)
+			return 0;
+
+		int[] max = new int[nums.length];
+		Arrays.fill(max, 1);
+
+		int result = 1;
+		for(int i=0; i<nums.length; i++){
+			for(int j=0; j<i; j++){
+				if(nums[i]>nums[j]){
+					max[i]= Math.max(max[i], max[j]+1);
+
+				}
+			}
+			result = Math.max(max[i], result);
+		}
+
+		return result;
+	}
+
 	// http://www.programcreek.com/2014/04/leetcode-longest-increasing-subsequence-java/
 	// Dynamic programmming Time: O(n^2 )
 	/**
@@ -37,19 +58,16 @@ public class LongestIncreasingSubsequence {
 			return 0;
 		}
 
-		int[] dp = new int[nums.length + 1];
+		int[] dp = new int[nums.length];
+		Arrays.fill(dp, 1);
 		int result = 0;
-		dp[0] = 0;
-		for (int i = 1; i <= nums.length; i++) {
-			dp[i] = 1;
-			// Note: j starts from 1;
-			for (int j = 1; j < i; j++) {
-				if (nums[j - 1] < nums[i - 1]) {
+		for (int i = 0; i < nums.length; i++) {
+			for (int j =0; j < i; j++) {
+				if (nums[i] > nums[j]) {
 					dp[i] = Math.max(dp[i], dp[j] + 1);
 				}
 			}
 			// Note:不能return 数组最后一个值，因为这题目的终点不是固定的，任意点结束，都可能是最大值
-			// return dp[nums.length]
 			result = Math.max(result, dp[i]);
 		}
 		return result;

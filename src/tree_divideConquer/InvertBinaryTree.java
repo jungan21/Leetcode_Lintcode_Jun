@@ -39,13 +39,12 @@ public class InvertBinaryTree {
 	 * divide conquer - recursive
 	 */
 	public TreeNode invertTreeRecursion2(TreeNode root) {
-		// this return is NOT recursive ending condition, it also works without
-		// return keywords
 		if (root == null)
 			return null;
 		// divide
 		TreeNode newLeft = invertTreeRecursion(root.right);
 		TreeNode newRight = invertTreeRecursion(root.left);
+
 		// conquer
 		root.left = newLeft;
 		root.right = newRight;

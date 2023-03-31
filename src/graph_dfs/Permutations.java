@@ -89,6 +89,7 @@ public class Permutations {
 				// you can't ignore this continue and if condition：
 				continue;
 			}
+
 			list.add(num[i]);
 			helper1(rst, list, num);
 			// 是因为你递归的时候，加入进去了后，回溯到本层的时候要去掉曾经加的

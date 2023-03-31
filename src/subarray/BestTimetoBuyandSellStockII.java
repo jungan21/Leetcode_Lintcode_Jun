@@ -1,9 +1,14 @@
 package subarray;
 
 /**
- * as many transactions as you like, 当时每天只能有一次交易（买 或者卖）
+ * 122. Best Time to Buy and Sell Stock II
+ *
+ * Find the maximum profit you can achieve. You may complete as many transactions as you like
+ * (i.e., buy one and sell one share of the stock multiple times). 当时每天只能有一次交易（买 或者卖）
  * 
  * Given an example [2,1,2,0,1], return 2
+ *
+ * Note: You may not engage in multiple transactions simultaneously (i.e., you must sell the stock before you buy again).
  * 
  * http://liangjiabin.com/blog/2015/04/leetcode-best-time-to-buy-and-sell-stock.
  * html

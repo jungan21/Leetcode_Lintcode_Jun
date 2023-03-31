@@ -1,0 +1,12 @@
+2016年5月更新
+http://www.jiuzhang.com/qa/974/
+最近与二分法相关的面试问题——
+
+给出两个整数A和B，在不使用div和mod操作的情况下求得A整除B的值
+给出一个排好序的整数数组和一个数A，返回A在数组中出现的次数
+http://www.lintcode.com/en/problem/total-occurrence-of-target/
+给出一个先上升后下降的整数序列，返回序列中最大的那个数的位置
+有n段木头，长度各异。现在希望通过这n段木头得到k段长度至少为m的木材，问可以获得的木材的最大长度是多少
+http://www.lintcode.com/en/problem/wood-cut/
+有n根绳子按一定顺序排列，长度各异。一根合格的绳子的长度至少为m，现在希望你连接某些相邻的绳子，从而尽可能获得最多的合格的绳子，问最多可以获得多少合格的绳子
+http://www.lintcode.com/en/problem/copy-books/

@@ -1,0 +1,3 @@
+permutations subsets nqueens 所有的搜索题
+时间复杂度都是 O(答案个数 * 构造每个答案的时间)
+subset这个题的时间复杂度:  (2 ^ n) * n

@@ -79,7 +79,7 @@ public class Heapify {
 		A[k] = temp;
 		k = smallest;
 		// recursive call;
-		siftdown(A, k);
+		siftdownRecursive(A, k);
 	}
 
 	// A.length/2 就是最后一个非叶子节点的下一个

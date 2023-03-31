@@ -17,6 +17,7 @@ public class ReverseLinkedList {
 	/**
 	 * jiuzhang 老师课堂提到 推荐
 	 */
+
 	private static ListNode reverse(ListNode head) {
 		// key point
 		ListNode pre = null;
@@ -25,11 +26,9 @@ public class ReverseLinkedList {
 			ListNode temp = curt.next;
 			curt.next = pre;
 
-			// keep moving
 			pre = curt;
 			curt = temp;
 		}
-		// 最后出了while循环，cur指向null, pre 指向最后一个node
 		return pre;
 	}
 

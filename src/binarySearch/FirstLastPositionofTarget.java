@@ -68,8 +68,7 @@ public class FirstLastPositionofTarget {
 			int mid = start + (end - start) / 2;
 
 			if (nums[mid] == target) {
-				// since look for first position, we ignore right side, and look
-				// for fist occurance in the left side
+				// since look for first position, we ignore right side, and look for fist occurance in the left side
 				// there might be numbers==target, in the left side
 				end = mid;
 			} else if (nums[mid] > target) {

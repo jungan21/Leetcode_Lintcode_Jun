@@ -67,7 +67,7 @@ public class WordSearch {
 			return true;
 
 		// ending recursive condition
-		if (i < 0 || i >= board.length || j < 0 || j >= board[0].length - 1) {
+		if (i < 0 || i >= board.length || j < 0 || j >= board[0].length) {
 			return false;
 		}
 

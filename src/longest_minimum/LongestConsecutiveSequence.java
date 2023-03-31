@@ -2,10 +2,11 @@ package longest_minimum;
 
 import java.util.HashSet;
 
+
 /**
  * Given an unsorted array of integers, find the length of the longest
  * consecutive elements sequence.
- *
+ *  128 https://leetcode.com/problems/longest-consecutive-sequence/
  *
  * Clarification Your algorithm should run in O(n) complexity.
  * 

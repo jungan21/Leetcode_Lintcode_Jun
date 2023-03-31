@@ -1,9 +1,6 @@
 package heap;
 
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 import sort.QuickSort;
 
@@ -90,6 +87,7 @@ public class KthLargestinNArrays {
 		// sort each row in descending order, so that we will user max heap
 		for (int i = 0; i < A.length; i++) {
 			QuickSort.quickSortDescend(A[i], 0, A[i].length - 1);
+			// Arrays.sort(A[i],  Collections.reverseOrder());
 		}
 
 		HashSet<String> set = new HashSet<String>();

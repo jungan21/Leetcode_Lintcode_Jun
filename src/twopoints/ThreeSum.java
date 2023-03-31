@@ -92,12 +92,12 @@ public class ThreeSum {
 		int right = A.length - 1;
 		while (left < right) {
 			int sum = A[left] + A[right];
-			int index = binarySearch(A, left + 1, right - 1, sum);
+			int index = binarySearch(A, left + 1, right - 1, -sum);
 			if(index == -1){
 				left++;
 				continue;
 			}
-			if(A[index] == sum){
+			if(A[index] == -sum){
 				ArrayList<Integer> list = new ArrayList<Integer>();
 				list.add(A[left]);
 				list.add(A[right]);

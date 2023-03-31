@@ -7,6 +7,7 @@ public class MiddleofLinkedList {
 	 * 
 	 * slow 肯定指向中点
 	 */
+
 	public ListNode middleNode(ListNode head) {
 		if (head == null || head.next == null) {
 			return head;

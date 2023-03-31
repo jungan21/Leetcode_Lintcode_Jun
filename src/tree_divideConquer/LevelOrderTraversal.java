@@ -40,14 +40,11 @@ public class LevelOrderTraversal {
 
 	public static ArrayList<ArrayList<Integer>> levelOrderBSF(TreeNode root) {
 		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
-
 		if (root == null) {
 			return result;
 		}
-
 		Queue<TreeNode> queue = new LinkedList<>();
 		queue.offer(root);
-
 		while (!queue.isEmpty()) {
 			ArrayList<Integer> currentLevelNodes = new ArrayList<Integer>();
 			// NOTE: size is changing for each loop

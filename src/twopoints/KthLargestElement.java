@@ -61,6 +61,7 @@ public class KthLargestElement {
 	 * 第一遍partition, O(n), 然后剩下的一般 O(1/2n) n + 1/2 n + 1/4 n + 1/8 n + .....1 <
 	 * 2 n
 	 */
+	// https://www.jiuzhang.com/solutions/kth-largest-element/
 	public static int quickSelect(int[] nums, int start, int end, int k) {
 		int left = start;
 		int right = end;
