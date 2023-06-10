@@ -81,4 +81,32 @@ public class CombinationSum {
 			list.remove(list.size() - 1);
 		}
 	}
+
+	/**
+	 *     # HW 候选人 答案，深入理解递归
+	 *     def dfs_2(self, candidates, target, start, combination, results):
+	 *         # 不能省略
+	 *         if start == len(candidates):
+	 *             return
+	 *
+	 *         if target < 0:
+	 *             return
+	 *
+	 *         if target == 0 and combination not in results:
+	 *             results.append(list(combination))
+	 *             return
+	 *
+	 *         # 不选当前的数
+	 *         self.dfs(candidates, target, start + 1, combination, results)
+	 *
+	 *         # 选当前的数， 下次还选当前的数
+	 *         combination.append(candidates[start])
+	 *         self.dfs(candidates, target - candidates[start], start, combination, results)
+	 *         combination.pop()
+	 *
+	 *         # 选当前的数， 下次不选当前的数
+	 *         combination.append(candidates[start])
+	 *         self.dfs(candidates, target - candidates[start], start + 1, combination, results)
+	 *         combination.pop()
+	 */
 }

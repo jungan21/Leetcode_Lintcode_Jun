@@ -1,5 +1,7 @@
 package matrix;
 
+
+// https://leetcode.com/problems/set-matrix-zeroes/ Leetcode: 73
 public class SetMatrixZeroes {
 
 	public static void main(String[] args) {
@@ -104,6 +106,51 @@ public class SetMatrixZeroes {
 		if (firstRowZero) {
 			for (int i = 0; i < matrix[0].length; i++)
 				matrix[0][i] = 0;
+		}
+
+	}
+
+
+	// Jun Method 2023 April 9th not recommend
+	public void setZeroesJun(int[][] matrix) {
+
+		int m = matrix.length;
+		int n = matrix[0].length;
+		boolean [][] visited = new boolean[m][n];
+
+		for (int i = 0; i<m; i++){
+			for (int j = 0; j<n; j++){
+				if (matrix[i][j] == 0){
+					helper(matrix, visited, i, j);
+				}
+			}
+		}
+
+	}
+
+	public void helper(int[][] matrix, boolean [][] visited, int i, int j){
+
+		if(i < 0 || i >= matrix.length || j < 0 || j >= matrix[i].length || visited[i][j]){
+			return;
+		}
+
+		visited[i][j] = true;
+		matrix[i][j] = 0;
+
+		for (int k = 0; k < matrix[i].length; k++){
+			// visited[i][k] = true;
+			if (!visited[i][k] && matrix[i][k] != 0){
+				matrix[i][k] = 0;
+				visited[i][k] = true;
+			}
+
+		}
+
+		for (int h = 0; h < matrix.length; h++){
+			if (!visited[h][j] && matrix[h][j] != 0){
+				visited[h][j] = true;
+				matrix[h][j] = 0;
+			}
 		}
 
 	}

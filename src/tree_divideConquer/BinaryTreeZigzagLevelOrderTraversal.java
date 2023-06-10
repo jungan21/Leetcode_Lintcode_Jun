@@ -35,7 +35,7 @@ public class BinaryTreeZigzagLevelOrderTraversal {
 	 * Best
 	 */
 
-	public ArrayList<ArrayList<Integer>> zigzagLevelOrder(TreeNode root) {
+	public static ArrayList<ArrayList<Integer>> zigzagLevelOrder(TreeNode root) {
 		ArrayList<ArrayList<Integer>> result = new ArrayList<ArrayList<Integer>>();
 		if (root == null) {
 			return result;

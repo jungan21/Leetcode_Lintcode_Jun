@@ -1,13 +1,14 @@
 package subarray;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Given an integer array, find a continuous subarray where the sum of numbers
  * is the biggest. Your code should return the index of the first number and the
  * index of the last number. (If their are duplicate answer, return anyone)
  * 
- * 
+ * https://us.jiuzhang.com/problems/info/402
  * MaximumSubarray.java仅要求求出最大的sum, 而这里要求返回 下标
  *
  */
@@ -18,8 +19,42 @@ public class ContinuousSubarraySum {
 		System.out.println(continuousSubarraySum(A));
 
 	}
+	// Best one . Recommend! https://us.jiuzhang.com/problems/info/402
+	public static List<Integer> continuousSubarraySum(int[] A) {
+		List<Integer> result = new ArrayList<Integer>();
+		// Note: must have result.add(0); otherwise result.set(0, start); throw IndexOutOfBoundsException
+		result.add(0);
+		result.add(0);
+		if (A == null || A.length == 0) {
+			return result;
+		}
 
-	public static ArrayList<Integer> continuousSubarraySum(int[] A) {
+		int globalMax = A[0];
+		int localMax = A[0];
+		//Note: logic is exactly same as MaximumSubarrayPrint.java just need use start, end points to track the index;
+		int start  = 0, end = 0;
+		for (int i = 1 ; i < A.length; i++){
+			// MaximumSubarrayPrint.java 里 localMax = Math.max(A[i], localMax + A[i]);
+			if (localMax + A[i] > A[i]){
+				localMax = localMax + A[i];
+				end = i;
+			} else {
+				localMax = A[i];
+				start = end = i;
+			}
+			// MaximumSubarrayPrint.java 里 globalMax = Math.max(globalMax, localMax);
+			if (localMax > globalMax){
+				globalMax = localMax;
+				result.set(0, start);
+				result.set(1, end);
+			}
+		}
+		return result;
+
+	}
+
+	// 不推荐
+	public static ArrayList<Integer> continuousSubarraySumMethod2(int[] A) {
 		ArrayList<Integer> result = new ArrayList<Integer>();
 		if (A == null || A.length == 0) {
 			return result;

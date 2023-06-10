@@ -1,0 +1,72 @@
+BQ:
+====
+Role-play Q: You need to convince your report to commit to switching to a new project that pulls them out of current work they really care about.
+Your IC is working on a project they are passionate about that has high visibility. They're interested in promotion. You have an unpleasant but critical project that only this IC can do, and want to take them off their current project to work on it.
+Walk through the conversation with them.
+    Answer:
+        Shiqi from Envoy building issue ==> Auth WASM Plugin for customer
+        Result:  80% working on this issue, 20%  time solving Envoy compiling issue
+    1. impact of this new project (business impact etc., directly impact customer)
+    2. think backwards from customer/stakeholder's perspective
+    3. your success is team's success eventualy, also contribute to that team member's success
+    4. by solving that issue, you can build WASM and security related issue
+
+How do you promote diversity in your teams?
+    1. emphasize benfits of diversity in the workplace
+    1. low-pressure env & inclusive workplace policies (hours,)
+    2. mix up your teams
+    3. encourage people to speak up /be vocal
+    4. Address Implicit Bias
+    5. communicate with transparency
+
+Role play: new employee not meeting the standard. Two engineers fighting over adding new functionality vs hitting customer date.
+How do you manage priorities, why management, what is your management style etc.
+Tell me a time you had to deal with conflict while in a position of authority?
+Tell me a time when you had to deal with an underperforming employee?
+Tell me about a time you had to make a difficult decision?
+    https://www.thebalancemoney.com/what-are-the-most-difficult-decisions-to-make-2061256
+    1. resource & bugdget reaseon but one sub-project from Charter: ..move pople from that project to other sub-project
+    1. Kenny to move to other team (for the big picture not impact team goal)
+    2. promote team members: Shiqi, Vs. Shiyu
+    2. in my life: quite job from HP to pursue master degree
+     There have been occasions when, even though I liked one person better than another,
+     I nonetheless had to choose the other person based on their potential to assume the responsibilities of their new role.
+     Sometimes I also had to promote younger employees over staff with seniority, simply because they were more skilled in the use of technology and more willing to work overtime.
+     It’s never easy, but ultimately you have to think about who will be the most effective and productive in the new position.
+
+Tell me a time you made a bad decision, and what did you learn from that?
+    1. let kenny lead innovation squard ( put right people on the right spot)
+    2. delegate as much a possible to your team, so that I can focus on more strategic/long term thinking
+    (learn that: trust team member )
+Tell me about the biggest challenges you experienced during your time as a manager?
+
+Tell me how you go about recruiting for a key role?
+    1. help from HR and paertner social medial, employee referral program
+    2. craft compelling/intriguing job description (challenge & opportunity)
+    3. proactively check resume yourself
+    4. attend meetup/workshop(aws reivent)
+    5. include peers/potential co-workers in the interview board
+
+
+What do you think is required to make a good manager? Later was asked about what advice I would give to a new manager.
+    1. openmindness
+    2. good communicator/ listener
+    3. empathtic (put yourself in other peopoe's shoes)
+    4. problem sloving/dealing with ambuiguity
+    5. navigate through ambuuity
+    6. definilteiy: tech background, life-long learner keep up with the latest tech trend in your domain
+In your opinion what is the biggest design flaw with X technology? (substitute X with one of your technical skill areas)
+roadmap and execution
+
+Project:
+======
+Technical discussion: Pick a project that you played a major part in and understand intimately. Describe the technical challenges you faced, how you overcame them, and the business outcomes. Then prepare a 20 minute presentation on that project and be prepared for in-depth Q&A from individuals that have read your document.
+Answer Question
+Write about a major technical project your team accomplished and present on it to a team of engineering managers and developers.
+Describe a system that ingests a putmetric-with-value API call
+
+System design:
+==========
+Design a system that aggregates and consumes analytics events. Answer some basic product analytics questions using your architecture and data model.
+we talked about how to build a simple ledger service that would record all transactions sent to it in a reliable and durable fashion.
+build a system to collect metrics from a large number of processes?

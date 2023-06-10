@@ -1,10 +1,6 @@
 package graph_dfs;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 /**
  * 
@@ -165,40 +161,54 @@ public class CourseSchedule {
 	}
 
 	// https://www.jiuzhang.com/solution/course-schedule
-	public boolean canFinishJiuzhang(int numCourses, int[][] prerequisites) {
-		// Write your code here
-		List[] edges = new ArrayList[numCourses];
-		int[] degree = new int[numCourses];
-
-		for (int i = 0;i < numCourses; i++)
-			edges[i] = new ArrayList<Integer>();
-
-		for (int i = 0; i < prerequisites.length; i++) {
-			degree[prerequisites[i][0]] ++ ;
-			edges[prerequisites[i][1]].add(prerequisites[i][0]);
+	//
+	public boolean canFinishJun(int numCourses, int[][] prerequisites) {
+		if (prerequisites == null) {
+			return true;
 		}
 
-		Queue queue = new LinkedList();
-		for(int i = 0; i < degree.length; i++){
-			if (degree[i] == 0) {
-				queue.add(i);
+		int len = prerequisites.length;
+		if (numCourses == 0 || len == 0){
+			return true;
+		}
+		// <Key:    Value: >
+		Map<Integer, List<Integer>> graphMap = new HashMap<>();
+		// track the in degrees for each course (each course is as node in graph):
+		int[] inDegrees = new int[numCourses];
+		for (int[] a : prerequisites) {
+			if (graphMap.containsKey(a[1])){
+				graphMap.get(a[1]).add(a[0]);
+			} else {
+				List<Integer> depList = new ArrayList<>();
+				depList.add(a[0]);
+				graphMap.put(a[1], depList);
+			}
+			inDegrees[a[0]]++;
+		}
+
+		Queue<Integer> queue = new LinkedList<>();
+		for (int i = 0; i < numCourses; i++){
+			if(inDegrees[i] == 0) {
+				queue.offer(i);
 			}
 		}
 
-		int count = 0;
+		int[] result = new int[numCourses];
+		int index = 0;
 		while(!queue.isEmpty()){
-			int course = (int)queue.poll();
-			count ++;
-			int n = edges[course].size();
-			for(int i = 0; i < n; i++){
-				int pointer = (int)edges[course].get(i);
-				degree[pointer]--;
-				if (degree[pointer] == 0) {
-					queue.add(pointer);
+			int course = queue.poll();
+			result[index++] = course;
+			if(graphMap.containsKey(course)){
+				for (int neighbor : graphMap.get(course)){
+					inDegrees[neighbor]--;
+					if(inDegrees[neighbor] == 0){
+						queue.offer(neighbor);
+					}
 				}
 			}
 		}
 
-		return count == numCourses;
+		return index == numCourses;
+
 	}
 }

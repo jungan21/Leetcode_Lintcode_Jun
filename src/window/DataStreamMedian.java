@@ -15,7 +15,7 @@ public class DataStreamMedian {
 		if (nums == null || nums.length == 0) {
 			return result;
 		}
-		// 注意写的时候直接用 Collections.reverseOrder()
+
 		PriorityQueue<Integer> leftMaxHeap = new PriorityQueue<Integer>(
 				nums.length, Collections.reverseOrder());
 		PriorityQueue<Integer> rightMinHeap = new PriorityQueue<Integer>(
@@ -31,12 +31,12 @@ public class DataStreamMedian {
 			} else {
 				leftMaxHeap.add(nums[i]);
 			}
-
+			//if (leftMaxHeap.size() > rightMinHeap.size()) 也工作
 			while (leftMaxHeap.size() > rightMinHeap.size()) {
 				rightMinHeap.offer(median);
 				median = leftMaxHeap.poll();
 			}
-
+			// if (leftMaxHeap.size() + 1 < rightMinHeap.size()) 也工作
 			while (leftMaxHeap.size() + 1 < rightMinHeap.size()) {
 				leftMaxHeap.offer(median);
 				median = rightMinHeap.poll();

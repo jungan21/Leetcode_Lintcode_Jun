@@ -58,22 +58,19 @@ public class AddTwoNumbersII {
 		return reverse(newDummyHead.next);
 	}
 
-	public ListNode reverse(ListNode head) {
+	// jiuzhang 老师课堂提到 推荐
+	private static ListNode reverse(ListNode head) {
+		// key point
+		ListNode pre = null;
+		ListNode curt = head;
+		while (curt != null) {
+			ListNode temp = curt.next;
+			curt.next = pre;
 
-		if (head == null || head.next == null) {
-			return head;
+			pre = curt;
+			curt = temp;
 		}
-		ListNode n1 = head;
-		ListNode n2 = head.next;
-		head.next = null;
-		while (n2 != null) {
-			ListNode temp = n2.next;
-			n2.next = n1;
-
-			n1 = n2;
-			n2 = temp;
-		}
-		return n1;
+		return pre;
 	}
 
 }

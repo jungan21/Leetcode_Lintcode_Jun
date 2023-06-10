@@ -1,9 +1,6 @@
 package sweepline_Interval;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 /**
  * Given a collection of intervals, merge all overlapping intervals.
@@ -102,4 +99,50 @@ public class MergeIntervals {
 		result.add(pre);
 		return result;
 	}
+
+	public int[][] merge(int[][] intervals) {
+		Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
+		List<int[]> result = new LinkedList<>();
+
+		int[] pre = intervals[0];
+		result.add(pre);
+
+		for (int i = 1; i < intervals.length; i++) {
+			int[] cur = intervals[i];
+			pre = result.get(result.size()-1);
+			if (cur[0] > pre[1]){
+				result.add(cur);
+			} else {
+				pre[1] = Math.max(pre[1], cur[1]);
+			}
+		}
+		return result.toArray(new int[0][0]);
+		//return result.toArray(new int[result.size()][]);
+	}
+
+//	C++ Version
+//	https://leetcode.com/problems/merge-intervals/editorial/
+//	class Solution {
+//		public:
+//		vector<vector<int>> merge(vector<vector<int>>& intervals) {
+//			sort(intervals.begin(), intervals.end());
+//
+//			vector<vector<int>> merged;
+//			for (auto interval : intervals) {
+//				// if the list of merged intervals is empty or if the current
+//				// interval does not overlap with the previous, simply append it.
+//				if (merged.empty() || merged.back()[1] < interval[0]) {
+//					merged.push_back(interval);
+//				}
+//				// otherwise, there is overlap, so we merge the current and previous
+//				// intervals.
+//				else {
+//					merged.back()[1] = max(merged.back()[1], interval[1]);
+//				}
+//			}
+//			return merged;
+//		}
+//	};
+
+
 }

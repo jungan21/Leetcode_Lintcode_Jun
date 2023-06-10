@@ -1,6 +1,8 @@
 package sweepline_Interval;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Given a set of non-overlapping & sorted intervals, insert a new interval into
@@ -53,6 +55,29 @@ public class InsertInterval {
 
 		result.add(newInterval);
 		return result;
+	}
+
+	public int[][] insert(int[][] intervals, int[] newInterval) {
+		List<int[]> result = new LinkedList<>();
+		if (intervals == null || intervals.length == 0) {
+			result.add(newInterval);
+			return result.toArray(new int[0][0]);
+		}
+
+		for (int i = 0; i < intervals.length; i++) {
+			int[] cur = intervals[i];
+			if(newInterval[0] > cur[1]){
+				result.add(cur);
+			} else if (newInterval[1] < cur[0]){
+				result.add(newInterval);
+				newInterval = cur;
+			} else if (newInterval[0] <= cur[1] || newInterval[1] >= cur[0]){
+				newInterval[0] = Math.min(cur[0], newInterval[0]);
+				newInterval[1] = Math.max(cur[1], newInterval[1]);
+			}
+		}
+		result.add(newInterval);
+		return result.toArray(new int[0][0]);
 	}
 
 }

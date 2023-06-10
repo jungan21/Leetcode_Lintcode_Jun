@@ -14,20 +14,22 @@ public class SwapNodeInPair {
 		ListNode p = dummy;
 		// 先要确定，接下来要swap的两个node都不是null
 		while (p.next != null && p.next.next != null) {
+			// 思路和ReverseNodesinKGroup.java里的reverse方法类似，
 			// NOTE: 循环里面赋值给n1, n2
-			ListNode n1 = p.next;
-			ListNode n2 = p.next.next;
+			ListNode p1 = p.next;
+			ListNode p2 = p.next.next;
 
-			// p->n1->n2->...
-			// => p->n2->n1->...
-			ListNode temp = n2.next;
+			// p->p1->p2->...
+			// => p->p2->p1->...
+			ListNode temp = p2.next;
 
-			p.next = n2;
-			n2.next = n1;
-			n1.next = temp;
+
+			p2.next = p1;
+			p1.next = temp;
+			p.next = p2;
 
 			// move to next pair
-			p = n1;
+			p = p1; // 思路和ReverseNodesinKGroup.java里的reverse方法类似，
 		}
 		return dummy.next;
 	}

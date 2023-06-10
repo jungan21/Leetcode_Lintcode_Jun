@@ -29,7 +29,7 @@ public class KthLargestElement {
 
 		int start = 0;
 		int end = nums.length - 1;
-		// 下面quickSelect,按逆序排序，kth largest的下面就是k-1
+		// 下面quickSelect,按逆序排序，kth largest的元素 对应的下标就是k-1
 		return quickSelect(nums, start, end, k - 1);
 	}
 

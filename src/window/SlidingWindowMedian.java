@@ -1,9 +1,13 @@
 package window;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+/**
+ * lintcode 360: https://www.lintcode.com/problem/360/
+ */
 public class SlidingWindowMedian {
 
 	public static void main(String[] args) {
@@ -135,15 +139,11 @@ public class SlidingWindowMedian {
 			return result;
 		}
 		PriorityQueue<Integer> rightMinHeap = new PriorityQueue<Integer>(k);
-		PriorityQueue<Integer> leftMaxHeap = new PriorityQueue<Integer>(k,
-				new Comparator<Integer>() {
-					public int compare(Integer a, Integer b) {
-						return b - a;
-					}
-				});
+		PriorityQueue<Integer> leftMaxHeap = new PriorityQueue<Integer>(k, Collections.reverseOrder());
 
 		for (int i = 0; i < nums.length; i++) {
 			if (i >= k) {
+				// nums[i - k] >= rightMinHeap.peek() 表示nums[i - k]在rightMinHeap里面
 				if (!rightMinHeap.isEmpty()
 						&& nums[i - k] >= rightMinHeap.peek()) {
 					// remove time cost: o(K), 下面的add/poll()操作是logk===>

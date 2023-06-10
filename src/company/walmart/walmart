@@ -1,0 +1,105 @@
+Kaggle: https://www.kaggle.com/jungan/code
+Recursive method to reverse a string
+Merge Intervals
+Reverse Lined List
+reverse a string
+if a number is a prime
+Leetcode palindrome
+How will you find loop in linked list
+How many pairs present in a list having given sum.
+Find triplet sum from an array
+FizzBuzz
+*** Given a string in a multidimensional array, exchange the character n for the n+3 character according to the alphabet.
+Design LRU cache
+Coin change
+*** How many jumps frog need to reach at to .Frog can jump either one or two steps.
+    https://leetcode.com/problems/frog-jump/
+    https://leetcode.com/problems/frog-jump-ii/
+DSA questions like modified binary search (search in a rotated arrays)
+Is binary tree Mirror of another binary tree
+differences between NoSql and SQL databases?
+implementing a stack data structure
+Balancing paranthesis - coding question
+Non repeating longest substring
+Valid Sudoku
+SlidingWindowMaximum
+given a list of numbers, find if any number in the list is prefix of another number
+Given a root to a binary tree and two nodes , find out whether two nodes are cousins or not. (Nodes at same level but from different parent)
+array of start time and end times of meetings , find the maximum no of meetings that can be arranged in a room (Condition for meetings - start time of next meeting > end time of current meeting)
+Insertion sort variation hacker rank test
+Asked popular Leetcode question based on cache (not LRU).
+2nd largest in an array
+Binary Tree DS Questions - Find Height of tree
+Level Order Traversal Of Binary Tree
+Mirror Image of Tree == Invert of the binary tree
+ZigZag Traversal of binary tree
+bottom view of binary tree
+delete a node from linked list. only reference to the node to be detelted
+    e.g. 1 -> 2-> 3->5->null reference is at 3 , not at first element, delete 3 from list.
+Generate all possible substrings from given string
+Max sum of two number from stream of data
+N meetings in 1 room
+****Stock span problem
+Lock & key problem
+Write a program to parse protocol and domain name given a URL string.
+https://www.youtube.com/watch?v=xZw7nmPiXU4
+
+OO Design:
+===
+How would you design an elevator system? Lift system
+    https://us.jiuzhang.com/problems/info/708
+    Lintcode: https://www.lintcode.com/problem/708/
+How to design an order placement system.
+movie theatre seating
+*** Wendy Bob problem - OA
+Different Load Balancing paradigms you are aware of , what are the loopholes of the current architecture and if given a chance what alteration will you bring.
+Design a class/state machine for a garage door (open/closed)
+
+System Design
+===
+tiny URL
+Design an e-commerce system where a store would sell both online and offline
+design rate limit service and test it.
+design twitter system and show the components
+Design Messenger System.
+    https://www.youtube.com/watch?v=zKPNUMkwOJE
+OLA System Design,
+How will you design from DB to job scheduling to handle deletion of millions of records?
+.
+
+Java
+===
+What is Atomic Integer?
+What is threadpool?
+
+How would one authenticate REST api calls so as not to expose the API for usage to everyone in the organization
+Garbage collection Types of garbage collectors
+. What is Singelton Class in java? How to create ?
+6. Internal working of Hashmap.
+particular use of some keywords in java .. that help with encapsulation and immutability.
+1. Multithreading - async calls
+2. Java 8 stream sorting - one liner code
+    Arrays.asList(10, 23, -4, 0, 18).stream().sorted().forEach(System.out::println);
+    List<Integer> list = Arrays.asList(2, 4, 1, 3, 7, 5, 9, 6, 8);
+
+    List<Integer> sortedList = list.stream().sorted().collect(Collectors.toList());
+    List<Integer> sortedList = list.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList());
+(ascending order )List<Integer> sortedList = list.stream().sorted( (i1, i2) -> i1.compareTo(i2) ).collect(Collectors.toList());
+(decending order)    List<Integer> sortedList = list.stream().sorted( (i1, i2) -> i2.compareTo(i1) ).collect(Collectors.toList());
+3. Java theory like stringbuilder vs stringbuffer,
+linkedHashSet vs treeset,
+    - LinkedHashSet:  uses LinkedHashMap internally. maintains insertion order of elements
+    - TreeSet: use TreeMap TreeSet orders the elements according to supplied Comparator. If no comparator is supplied, elements will be placed in their natural ascending order.
+Volatile keyword
+Java multithreaded synchronisation and deadlock
+Detailed discussion on dependency injection.
+
+
+BQ:
+===
+Process walkthrough for a hypothetical product development (initiation, planning, execution),
+leadership scenarios (difficult assignments, PIP, turnarounds, retention, managing High Performers et al)
+How to manage project delivery?
+How will you handle a POC, what are different aspects to be taken care in POC
+What tool would you use to create executive reports?
+How to grow people ?

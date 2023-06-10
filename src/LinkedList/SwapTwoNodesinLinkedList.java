@@ -63,7 +63,7 @@ public class SwapTwoNodesinLinkedList {
 			pV1.next = null;
 			pV2.next = null;
 
-			// 如果不做此判断， 会形成环
+			// 如果不做此判断， 会形成环. v1, v2两个节点不相邻
 			if (pV2 != preV1 && pV1 != preV2) {
 				preV1.next = pV2;
 				pV2.next = pV1Next;

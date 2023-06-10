@@ -42,13 +42,17 @@ public class PalindromeLinkedList {
 		ListNode slow = head;
 		ListNode fast = head;
 
+		/**
+		 * while (fast != null && fast.next != null) 结束，slow指向第2个middle (偶数情况下 有2个middle ndoes)
+		 * while (fast.next != null && fast.next.next != null) 结束，slow指向第1个middle (偶数情况下 有2个middle ndoes)
+		 */
 		while (fast.next != null && fast.next.next != null) {
 			slow = slow.next;
 			fast = fast.next.next;
 		}
 		// get the second half of the list
 		ListNode secondHead = slow.next;
-		slow.next = null;
+		slow.next = null; // split linked list into 2 from the middle
 
 		// reverse second half list
 		ListNode reversedSecondHalf = reverse(secondHead);
@@ -64,6 +68,7 @@ public class PalindromeLinkedList {
 		return true;
 	}
 
+	// jiuzhang template
 	public static ListNode reverse(ListNode head) {
 		if (head == null || head.next == null) {
 			return head;

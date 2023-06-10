@@ -1,0 +1,17 @@
+1. reverse linkedlist
+2. remove comments from a paragraph of Python code
+3. Graph question with red and white labels
+4. binary search tree
+5. array/string manipulation
+6. DFS/BFS
+7. tILING A RECTANGLE WITH THE fewest squares.
+8. Leetcode: find minimum in sorted array II
+9. LRU Cache
+10. implement a stack
+11. island problem . number of island, Union and Find
+Given a 2D boolean array arranged to represent a map, where T is land and F is water, count the number of island(conjoined patches of land completely surranded by water) in the map
+12. LCA of binary tree
+13. Given an unsorted array of arbitary integer. define a sequence as numerically-consecutive number (e.g. 1, 2,3, 4, 5 is a sequence)
+Find the length of the longest sequence oin the array. Note that the numerically consequtive sequence need not be consecutive in the array
+(e.g. 3, 4, 3, 5, 1, is a seuqnce of length 5). Perform this task in O(n) time.
+14. merge sort without recursion(2014 Nov 6)

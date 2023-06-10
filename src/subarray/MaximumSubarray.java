@@ -49,7 +49,7 @@ public class MaximumSubarray {
 	 * ， 然后维护一个全局最大值即位答案。
 	 */
 
-	public static int maxSubArray1(int[] A) {
+	public static int maxSubArray1(int[] A){
 		int[] localMax = new int[A.length];
 		localMax[0] = A[0];
 		int globalMax = A[0];

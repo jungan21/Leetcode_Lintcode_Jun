@@ -93,10 +93,10 @@ public class ConvertBinarySearchTreetoDoublyLinkedList {
 				node.left = null;
 			} else {
 				DoublyListNode listNode = new DoublyListNode(node.val);
-				System.out.println(node.val);
 				listNode.prev = cur;
 				cur.next = listNode;
 				cur = cur.next;
+
 				stack.pop();
 				if (node.right != null) {
 					stack.push(node.right);

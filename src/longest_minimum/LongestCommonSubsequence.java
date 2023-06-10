@@ -18,7 +18,7 @@ public class LongestCommonSubsequence {
 
 		int lenA = A.length();
 		int lenB = B.length();
-
+		// length has to be lenA + 1 & lenB + 1
 		int dp[][] = new int[lenA + 1][lenB + 1];
 
 		dp[0][0] = 0;

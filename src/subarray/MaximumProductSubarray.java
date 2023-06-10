@@ -92,8 +92,8 @@ public class MaximumProductSubarray {
 		if (A == null || A.length == 0)
 			return 0;
 
-		int max, curMax, curMin;
-		max = curMax = curMin = A[0];
+		int globalMax, curMax, curMin;
+		globalMax = curMax = curMin = A[0];
 		// 注意： i 从1 开始,和乘法和加减不一样，需要从第二个数开始，与第一个数字相城， 加减法，可以用sum=0做为开始
 		for (int i = 1; i < A.length; i++) {
 			// 必须要设置一个temp to track the max for last/previous
@@ -101,9 +101,9 @@ public class MaximumProductSubarray {
 			int temp = curMax;
 			curMax = Math.max(Math.max(curMax * A[i], curMin * A[i]), A[i]);
 			curMin = Math.min(Math.min(temp * A[i], curMin * A[i]), A[i]);
-			max = Math.max(max, curMax);
+			globalMax = Math.max(globalMax, curMax);
 		}
-		return max;
+		return globalMax;
 
 	}
 }

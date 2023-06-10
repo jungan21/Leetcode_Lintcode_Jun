@@ -18,7 +18,7 @@ public class ReverseLinkedList {
 	 * jiuzhang 老师课堂提到 推荐
 	 */
 
-	private static ListNode reverse(ListNode head) {
+	public static ListNode reverse(ListNode head) {
 		// key point
 		ListNode pre = null;
 		ListNode curt = head;

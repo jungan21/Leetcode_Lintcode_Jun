@@ -42,10 +42,11 @@ public class Backpack {
 
 		for (int i = 1; i <= A.length; i++) {
 			for (int j = 1; j <= m; j++) {
+				// 不取当前物品
 				dp[i][j] = dp[i - 1][j];
+				// 取当前物品
 				if (j >= A[i - 1]) {
-					dp[i][j] = Math.max(dp[i][j], dp[i - 1][j - A[i - 1]]
-							+ A[i - 1]);
+					dp[i][j] = Math.max(dp[i][j], dp[i - 1][j - A[i - 1]] + A[i - 1]);
 				}
 			} // for j
 		} // for i

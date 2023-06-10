@@ -74,11 +74,12 @@ public class TopKFrequentWords {
 		PriorityQueue<Pair> minHeap = new PriorityQueue<Pair>(k, comparator);
 
 		for (String word : words) {
-			if (map.containsKey(word)) {
-				map.put(word, map.get(word) + 1);
-			} else {
-				map.put(word, 1);
-			}
+			map.merge(word, 1, Integer::sum);
+//			if (map.containsKey(word)) {
+//				map.put(word, map.get(word) + 1);
+//			} else {
+//				map.put(word, 1);
+//			}
 		}
 //
 //		for (Map.Entry<String, Integer> entry : map.entrySet()) {

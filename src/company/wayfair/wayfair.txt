@@ -1,0 +1,270 @@
+https://www.glassdoor.ca/Interview/Wayfair-Software-Engineer-Interview-Questions-EI_IE134525.0,7_KO8,25_IP7.htm?filter.jobTitleFTS=Software+Engineer
+
+page 8
+
+Coding:
+Add NumberII
+string manipulation
+Add 2 string numbers. (followed by formatting the output to add commas.)
+Code a Binary tree algorithm
+sub domain visit count (leetcode)
+longest common subsequence (leetcode)
+Given two strings, find longest common substring
+???The second question involved finding the longest consecutive subsequence for an arbitrary number of lists.
+Find longest matching contiguous elements in 2 arrays.
+??? Find the area of a rectangle based on grid array
+check if the array contains the sum of two integers.
+One question involved checking whether a given three digit tuple contained either a prime number, or a power of primes.
+code question about Graph and Binary tree diameter
+Leetcode 79 Word search but you can only go either to the right or down
+2- Palindrome, Longest palindrome in string
+Write a function to determine if a string is a substring of another string.
+Isomorphic Strings
+Reverse a string
+generating all combinations of array of strings
+max subarray sum / maximum subarray question
+Print out all combinations from an array or arrays.
+    Example:
+    Input: [ [ a, b ], [ c, d, e ], [ f, g ] ]
+    Output:
+    acf
+    acg
+    bcf
+    bcg
+Given a two-dimensional array of strings, return all possible combination of words.
+a list of list of strings and you need to print all the combinations of the words from different lists, and you cannot use recursive method
+        Example:
+        ['grey','black']
+        ['fox','dog']
+        ['jumped','ran','growled']
+
+        Return:
+        grey fox jumped
+        grey fox ran
+        grey fox growled
+        black fox jumped
+        ...
+        black dog growled
+generate palindrome using recursion
+given an array that contains duplicates find the only non-duplicate element.
+Write a code that show all possible permutation from a given String.
+Find the depth of a binary tree,
+Course Scheduling Coding Excercise
+1. Given an array of duplicate elements, remove duplicates, maintain order of elements.
+how to convert a number into a string (check writing question), 123 ==>  "123"
+Given an array of size N and a random number M (M < N), generate an array of size M that contains random element from array N
+Implement a function that returns a sum of all multiples of N in an array.
+Phone pad problem (except 0), combinations with a chess piece returning a list of numbers of a specific length, ex. Starting point 1, Chess piece Knight, length 3: return {181, 183, 161, 167}
+Return matching element in sum of two element in a array
+Onsite : Design classes, methods, etc to find N most visited urls
+Write a code to save data into cache with a Max limit of 5 records, meaning, keep the most recently used records only in the cache.
+
+Write a method where the input is a array string & convert to file format output.
+1. How to encrypt a set of string e.g. WAAAYYFFFFFAIIIRR to W1A3Y2F4A1I3R2 etc... And how to decrypt it back to original string (2 separate functions)
+4. A coding problem to simulate the coin game and gambler's fallacy (if they are 4 Heads in a row, gambler would bet on Tail, and vice versa).
+Given a string that represents path for a truck to take check what’s the weight on truck at the end of route. After that asked to make sure weight is removed from truck only if there is extract weight of boxes.
+    Example: 10B20 20B10 10 -5B10
+    (10 boxes of 20lb)
+    output- 460
+Given a string that represents truck load/unload journal, identify final total weight of boxes. Format: [+-]NbW, where N - number of boxes(optional), W - weight of a box. Example: "b40 +3b20 -2b10 " would result in total weight of +80.
+
+Assume you have a binary number 00110010, you apply some function on it and the number changes to some random number 10100011.
+Write a function to determine which numbers flipped from 0 to 1 and which bits flipped from 1 to 0. (You will have to write 2 different functions for 0 to 1 and 1 to 0).
+
+
+Onsite: 1. How would you go about designing MTBA network (Rail and Road network)? Followup: How would keep track of user activities.
+OnSite 2: Programming: Program Roulette game and determine if you win/loose having an initial amount. You need to also determine if its really your day to play more or not.
+Instead of multiples of N, multiples of any other number in a different array.
+print matrix multiplication table with good formatting,
+
+Knapsack problem
+    Algorithm question to load packages into containers
+    backpack problem (add items to the inventory ,remove , delete ,check if exists)
+Stocks Buy-Sell problem
+
+DB Q & A:
+difference between eventual consistency & strong consistency
+How to scale a system and load balancer algorithms
+JOIN based SQL
+Self Join SQL
+You open the website and see a blank page. What do you do?
+What the difference between http post vs http get
+    https://www.w3schools.com/tags/ref_httpmethods.asp
+
+DB2 Table Partition: https://www.ibm.com/docs/en/db2/11.5?topic=strategies-optimization-partitioned-tables
+DB2 Buffer Pool: https://www.ibm.com/docs/en/db2-for-zos/12?topic=performance-tuning-database-buffer-pools
+
+
+
+
+System Design:
+    TinyURL Include ability to generate analytic reports such as how many times users clicked on specific tiny URL and so on.
+    How to implement hashing?
+    Implement a leaderboard.. Create a method that gets the top N scores from the scoreboard.
+        https://www.youtube.com/watch?v=kx-XDoPjoHw
+
+    Design system for most shared stories on Facebook and design queries to get top 5 most shared stories in the last 5 minutes
+    design an application to manage a shop that rents out stuff to customers
+        Leetcode 1912
+        https://www.youtube.com/watch?v=0MdLAp5h4BE
+    Design a large distributed system that provides some arbitrary service focusing on bottlenecks, tradeoffs, CAP(?), etc
+    Design a music matching system like Shazam Shazam System Design
+    How to design a system so that user can check in their location thru their phone, and how to scale it when the app gets popular and millions of users are using it.
+        D:\Jun\Learn\Online Course\jiuzhang classes\系统设计\7._Location_Based_Service__Design_Uber_v4.3
+    Build a Shipping tracking service to accommodate number of suppliers (DHL, FedEx, etc) a user might want to select from and to provide a way of translating supplier-specific statuses into user-friendly format.
+    Example: DHL "in transit" -> "Out For Delivery"; UPS "delivered" -> "Delivered".
+    Optimize existing data pipeline
+    How would you expand the application features when popularity grows.
+    上周面了wayfair多伦多，感觉一般般，一天一共四轮，开始结束都有HR谈几分钟第一题：OOD设计一个租车系统，可以出租自行车和scooter两种，要求画对象的关系图什么的。
+    第二题：系统设计，设计一个景点的checkin和review系统。
+     设计Automation Parking System -- 感觉他们家挺重视OOD and DB design
+
+OO Design:
+    OO Design Bicycle Shop OOD.  Design Bike rental app (Class diagrams)
+    Automated Parking Lot Object-Oriented Design
+    Elevator Design
+
+DB Design
+    Design a relational database for a movie rental company.
+    Design a database for football tournament.
+    DB Schema for DVD/Blu-Ray rental
+    Design a NetFlix Database for Movies -- SQL Design
+    Design a database system for storing Check-ins at a place
+    How would you design a database schema for a very simple shoe shop?
+    Different joins in SQL
+    How to design a database of Warehouse, Suppliers and Customers and they ask you to write various SQL queries to pull products sold, how many customers bought more than 30 products etc
+    Design database for a system where company employees can rent a DVD from a pool of movies contributed by other employees.
+    Get a list of renters who borrowed a DVD contributed by a specific user
+    SQL design: They question was about a soccer tournament. We have a number of teams that are playing against each other. They asked me to design data base schema to store the teams, and results of the matches. Then, they asked me to write some queries.
+    Explain LRU algorithm used in caching?
+
+
+
+Benavior:
+===
+what's the most challenging case when having one on one with reports?
+    Even the most positive people have bad days, so give your employee the space to vent or decompress if they need to
+     Figure out why your employee is frustrated (money, promotion) as you listen, trying to understand
+     with empathy & understanding, the other people will be more open to sharing how they relaly feel
+     acknowledge what they share with you . echo back what you've heard
+     focus on performance  not personality
+anything you did do well, if you had chance to do it again ...how could you do it better?
+    WASM Resaerch : spent quit a lot of time focuing to solving challenging problem. business success, define scenairo, scoping the work property
+    https://devskiller.com/blog/45-behavioral-questions-to-use-during-non-technical-interview-with-developers/
+"tell me about a time you had to communicate a difficult message to senior leadership?"
+Tell me about a time you had to deal with an ambiguous situation
+Tell me about yourself, why do you want to work here.
+Tell me a time you used data to make a strategic decision.
+What was the worst mistake you have ever made?
+
+Tell me about a time you had a conflict with somebody else - how did you handle it?
+Describe one of your success project
+Provide examples of leadership, process improvement initiatives and using data to create change.
+Provide an example of how you own a project? Provide an example of how you collaborate with cross functional teams?
+1) Tell me about a time you took ownership of something (2) Tell me about a time you had to deal with an ambiguous situation
+Tell me about yourself, why do you want to work here.
+Example of using data to make a decision.
+What do you feel you can bring to the team?
+Tell me about a time when you had to manage a difficult work relationship.
+How are you qualified for this role?
+
+What do you know about Wayfair? Make sure you can articulate why you want to work for Wayfair
+Standard questions about your past experience - make sure you can articulate what you're good at
+Tell use about a difficult situation you had to deal with.
+
+
+May 15
+    11:30-11:40 Amanda
+    11:40-12:40 Vipin Mathew (DB Infra Product Manager) - We win together
+        1. Tech leadership. how to lead a large team to achieve result
+        2. how you lead team through tech challenge
+        3. high level iniative strategy (e.g. operation iniative to improve engieering excellence)
+        4. management style :how to manage underperformer, how to promote people (examle when promote a member to leader/manager)
+        5. Push back /disagree with up level manager (upward managemnt)
+        6. hands-on contribution example
+        7. conflict with colleagure or direct report (emphaty 同理心)
+    4pm-5pm Peter Schwaller (Sr. Manager) - we are always improving
+        1.Data-driven way to imrpove operation efficience (e.g. using automation to ****)
+        2. how to grow / mentor leader (e.g. shiqi)
+        3. how to analyze team member strength / drawbacks
+        4. how to put pople in the right spot/postion
+        5. other soft skills to succed
+
+May 22
+    11-12: Shashank Srivastava - We drive result (current manager for hiring team)
+    12-12:10: Debrief with Amanda
+        1. Experience managing team , day-to-day work to illusrate how to:
+            manage people
+            manage project
+        2 experience of solving a complex DB prolbem (clarify)...
+          （context/background: this team is not doing DB manamgent, but also DevOps work）
+        3. how you delegate work to team leader/member
+        4. cross-functional collaboration.
+        5. DB DevOps:https://www.knowledgehut.com/blog/devops/database-devops
+
+
+
+
+
+
+
+Prep:
+===
+SOLID principal
+Class diagrams
+● Entity Relationship Diagrams
+● API specs
+● Sequence diagrams, etc.
+Microservice architectures
+● Distributed caching
+● High availability & resiliency
+● Techniques for scaling services and data stores
+● Basic HTTP specifications
+
+Additional examples of things we look for:
+● Does the candidate show examples of successful partnership with
+stakeholders and peers with clear communication?
+● Is the candidate flexible in their solutions and open to new ideas? How do they
+adapt to new or ambiguous requirements?
+Is the candidate able to:
+● Get by in from various levels of peers on design and architectural decisions?
+● Take suggestions while working through technical challenges?
+● Drive change / process improvements when needed?
+● Speak in depth about
+
+working in ambiguous situations where you may not have
+all the necessary requirements from the starting point and requirements may change over
+time; it is in these situations we look for our managers to provide direction and own a game
+handling competing priorities and collaboration with
+stakeholders
+
+
+Code Review and We Drive Results
+1. In this session you should expect to review a sample of code to diagnose bugs and propose
+fixes.
+2. You will be asked to review a sample of code in whichever language you choose
+(Java, C#, Python).
+3. Demonstrate strong communication and problem-solving skills as you work through
+the code sample.
+4. Within this interview round we are assessing your ability to: navigate bugs in the
+sample code, propose fixes to the bugs you detect, and showcase clear
+communication.
+5. Additionally, we are looking for your ability to avoid code duplication and propose
+SOLID principles and design patterns as needed.
+
+
+$$$
+===
+https://www.1point3acres.com/bbs/thread-993805-5-1.html
+报一个家属包裹~400kcad一年股价是按$40刀refresh的. L4 low band, high band: 50
+L4base肯定不止200KL2base高的就有这个数了现在是按40一股发
+
+https://www.1point3acres.com/bbs/thread-788628-1-1.html
+每年200股（当时股价估算值是$300）没有签字奖金
+
+https://www.1point3acres.com/bbs/thread-899389-1-1.html
+
+https://www.1point3acres.com/bbs/thread-899389-1-1.html
+谈了一下，tc加价到500k。HR说是最顶包了。
+谈了一下，tc加价到500k。HR说是最顶包了。
+建议宁可要少点RSU， base 直接bump到280k， 没有其他G家脸家 5-6的offer就来碰碰运气吧。

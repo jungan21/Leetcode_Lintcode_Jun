@@ -1,6 +1,7 @@
 package heap;
 
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
@@ -43,6 +44,9 @@ public class TopkLargestNumbers {
 		// }
 		// };
 
+		// better one
+		//PriorityQueue<Integer> maxHeap1 = new PriorityQueue<Integer>(k, Collections.reverseOrder());
+
 		// 逆序排列，即：构建max heap,堆顶部一直是最大的那个元素
 		// Max Heap，仅仅能保证了堆顶的元素是整个堆最大的那一个， 所以需要把所有元素放到queue,里
 		PriorityQueue<Integer> maxHeap = new PriorityQueue<Integer>(k,
@@ -51,6 +55,7 @@ public class TopkLargestNumbers {
 						return b - a;
 					}
 				});
+
 
 		for (int num : nums) {
 			maxHeap.offer(num);

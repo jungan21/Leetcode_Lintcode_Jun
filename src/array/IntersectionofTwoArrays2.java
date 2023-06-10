@@ -34,6 +34,7 @@ public class IntersectionofTwoArrays2 {
 			} else {
 				map.put(i, 1);
 			}
+			//map.merge(i, 1, Integer::sum);
 		}
 
 		ArrayList<Integer> list = new ArrayList<Integer>();
