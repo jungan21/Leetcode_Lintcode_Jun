@@ -46,30 +46,20 @@ public class AggregatePrice {
         //外循环是每10秒的时间window. startAt <= lastWindowStart, 如果写成< 会miss最后一个window
         for (int startAt = firstWindowStart; startAt <= lastWindowStart; startAt += 10) {
             int endAt = startAt + 10;//当前窗口的截止时间点
-            boolean initialized = false;
-
-            int open = 0;
-            int close = 0;
-            int max = 0;
-            int min = 0;
-            // 该index 一致往前跑，不会往回扫描，所有数据点仅被扫描一次
-            while (index < ticks.size() && ticks.get(index).ts < endAt) {
+            
+            boolean initialized = false; // 每个新的window都需要重置
+            int open = 0; int close = 0; int max = 0; int min = 0; // 每个新的window都需要重置
+         
+            while (index < ticks.size() && ticks.get(index).ts < endAt) {    // 该index 一致往前跑，不会往回扫描，所有数据点仅被扫描一次
                 int price = ticks.get(index).price;
 
                 if (!initialized) {
-                    open = price;
-                    close = price;
-                    max = price;
-                    min = price;
+                    open = price; close = price; max = price; min = price;
                     initialized = true;
                 } else {
                     close = price;
-                    if (max < price) {
-                        max = price;
-                    }
-                    if (min > price) {
-                        min = price;
-                    }
+                    max = Math.max(price, max);
+                    min = Math.min(price, min);
                 }
                 index++;
                 lastPrice = price; //很重要， 用于填充没有数据的10秒window.
@@ -87,10 +77,9 @@ public class AggregatePrice {
                 //res.add(String.format("(%d, %d, %d, %d, %d)", startAt, open, close, max, min));
                 res.add("(" + startAt + "," +  open + "," + close + "," + max + "," +  min + ")");
             } else  {
-                // initialized == false, 表示该window没有数据，譬如第20秒的window没有任何tick
+                // initialized == false, 每个window都需要重置，false表示该window没有数据，譬如第20秒的window没有任何tick
                 if(lastPrice != -1) {
-                   // res.add(String.format("(%d, %d, %d, %d, %d)", startAt, lastPrice, lastPrice, lastPrice, lastPrice));
-                    res.add("(" + startAt + "," +  open + "," + close + "," + max + "," +  min + ")");
+                   res.add(String.format("(%d, %d, %d, %d, %d)", startAt, lastPrice, lastPrice, lastPrice, lastPrice));
                 }
             }
         }
