@@ -32,11 +32,8 @@ public class AggregatePrice {
         List<Tick> ticks = parseInput(input);
         if (ticks.isEmpty()) return "";
 
-        int firstTs = ticks.get(0).ts;
-        int lastTs = ticks.get(ticks.size() - 1).ts;
-
-        int firstWindowStart = firstTs / 10 * 10;  //0/10*10 = 0
-        int lastWindowStart = lastTs / 10 * 10; // 35/10*10 =30
+        int firstWindowStart = ticks.get(0).ts / 10 * 10;  //0/10*10 = 0
+        int lastWindowStart = ticks.get(ticks.size() - 1).ts / 10 * 10; // 35/10*10 =30
 
         int index = 0;
         int lastPrice = -1;
