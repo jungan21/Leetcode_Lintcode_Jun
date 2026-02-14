@@ -10,7 +10,7 @@ public class CommitOffset {
 
     // 存储已收到的偏移量
     private final Set<Integer> receivedOffsets = new HashSet<>();
-    private int lastCommitedOffset = -1; // 记录当前已经提交到的最大位置
+    private int lastCommitedOffset = -1; //重要：必须是-1开始！！！ 记录当前已经提交到的最大位置
 
     /**
      * @param offset 新到达的消息偏移量
@@ -38,15 +38,20 @@ public class CommitOffset {
          *      开始执行while循环， 由于commitedOffset=2，表示2之前都不用检查了，已经提交了。从temp+1= 3开始检查
          *
          */
-        while (true) {
-            int nextCommit = tempNextCommit + 1;
-            if (receivedOffsets.contains(nextCommit)) {
-                // 如果下一个序号已到达，则更新临时指针并继续探测
-                tempNextCommit = nextCommit;
-            } else {
-                break;
-            }
+//        while (true) {
+//            int nextCommit = tempNextCommit + 1;
+//            if (receivedOffsets.contains(nextCommit)) {
+//                // 如果下一个序号已到达，则更新临时指针并继续探测
+//                tempNextCommit = nextCommit;
+//            } else {
+//                break;
+//            }
+//        }
+
+        while (receivedOffsets.contains(tempNextCommit+1)) {
+            tempNextCommit++;
         }
+        
         System.out.println("Temp" + tempNextCommit);
 
         if (tempNextCommit > lastCommitedOffset) {
