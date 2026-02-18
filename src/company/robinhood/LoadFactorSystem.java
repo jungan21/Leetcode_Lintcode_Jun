@@ -4,7 +4,15 @@ package company.robinhoods;
 import java.util.*;
 import java.util.stream.Collectors;
 
-// practice 类似的 拓扑排序 course schedule题目
+/**
+ * 总的 O(NlogN)
+ * 
+ * build Graph:  O(E) E是图的边。 
+ * DFS找reachable:  O(V+E), 每个节点和边仅visit 1次
+ * 计算Indegree： O(V+E)
+ * TopSort:  O(V+E) 仅访问一次
+ * Collection.sort: NlogN
+ */
 public class LoadFactorSystem {
 
     Map<String, List<String>> adjListGraph = new HashMap<>();
