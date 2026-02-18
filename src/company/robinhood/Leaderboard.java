@@ -3,6 +3,16 @@ package company.robinhoods;
 import java.util.*;
 
 /**
+ *   O(NlogN + E)    N是推荐人数量，E是边数，推荐关系
+ *
+ *   DFS的复杂度（V + E）: 因为有记忆化搜索，每个节点只会visit 1次.
+ *      ！！！如果没有记忆化搜索, DFS从O(N) 退化为：！！！
+ *          链表状树： O(N^2)  (1+2+3+...+N)
+ *          binary tree:  NlogN
+ *          重叠DAG:  最糟糕 O(2 ^ N) exponential
+ *
+ *   Collections.sort排序：  NlogN
+
  * inpupt: 给定两个长度相等的字符串数组 referrers 和 new_users。referrers[i] 表示推荐人，new_users[i] 表示被推荐人。
  * 推荐关系可以传递（例如：A 推荐了 B，B 推荐了 C，则 A 的总推荐数计为 2）。
  *
